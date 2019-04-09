@@ -18,7 +18,7 @@ const Dashboard = () => {
 
   const handleStrike = () => {
     const nextValue = strikes + 1;
-    Boolean(nextValue === 3)
+    nextValue === 3
       ? handleOut()
       : setStrikes(nextValue);
   }
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   const handleInning = () => {
     const nextValue = inning + 1;
-    Boolean(nextValue === 10)
+    nextValue === 10
       ? gameOver()
       : setInning(nextValue);
   }

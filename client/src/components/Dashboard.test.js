@@ -3,8 +3,8 @@ import { render, fireEvent, waitForElement } from 'react-testing-library';
 
 import Dashboard from './Dashboard';
 
-describe('<Dashboard />', () => {
-  it('resets balls and strikes to 0 when a player reaches 3 strikes', async() => {
+describe('<Dashboard />', ( ) => {
+  it('reset balls and strikes to 0 when a player reaches 3 strikes', async() => {
     const { getByText } = render(<Dashboard />);
 
     await waitForElement(() => getByText('Strikes: 0'));
@@ -16,7 +16,7 @@ describe('<Dashboard />', () => {
     fireEvent.click(button); await waitForElement(() => getByText('Strikes: 0'));
   });
 
-  it('resets balls and strikes to 0 when a player reaches 4 balls', () => {
+  it('reset balls and strikes to 0 when a player reaches 4 balls', () => {
     const { getByText } = render(<Dashboard />);
 
     getByText('Balls: 0');
@@ -29,7 +29,7 @@ describe('<Dashboard />', () => {
     fireEvent.click(button); getByText('Balls: 0');
   });
 
-  it('resets balls and strikes to 0 when a hit is recorded', () => {
+  it('reset balls and strikes to 0 when a hit is recorded', () => {
     const { getByText } = render(<Dashboard />);
 
     getByText('Balls: 0');
